@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	{% load static %}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>sar</title>
+	<link rel="stylesheet" href="{% static 'sar/bootstrap-3.3.7-dist/css/bootstrap.min.css' %}">
+    <script src="{% static 'sar/jquery.js' %}"></script>
+    <script src="{% static 'sar/bootstrap-3.3.7-dist/js/bootstrap.min.js' %}"></script>
+</head>
+<body>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button class="navbar-toggle" data-toggle="collapse" data-target="#example">
+					<span class="sr-only">切换导航</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand">SAR</a>
+			</div>
+			<div class="collapse navbar-collapse" id="example">
+				<ul class="nav navbar-nav">
+					{%if user.is_authenticated %}
+					<li><a href="{%url 'sar:user_home'%}">{{ user.get_username }}</a></li>
+					{% else %}
+					<li><a href="{%url 'sar:login_view'%}"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;&nbsp;登陆</a></li>
+					<li><a href="#">注册</a></li>
+					{% endif %}
+					<li><a href="{%url 'sar:llogout'%}">退出</a></li>
+					<li><a href="#">关于我们</a></li>
+					<li><a href="#">帮助</a></li>
+				</ul>
+			</div>
+		</div>
+		
+	</nav>
+	<div class="container">
+		<table class="table">
+		<tr>
+			<td>试验类型</td>
+			<td>{{clas}}</td>
+		</tr>
+		<tr>
+			<td>试验名称</td>
+
+			<td>{{history.title}}</td>
+		</tr>
+			<tr>
+			<td>处理对象名称</td>
+			<td>{{history.drug_name}}</td>
+
+		</tr>
+			<tr>
+			<td>处理对象总数</td>
+			<td>{{history.drug}}</td>
+
+		</tr>
+			<tr>
+			<td>区组名称</td>
+			<td>{{history.block_name}}</td>
+		</tr>
+			<tr>
+			<td>区组总数</td>
+			<td>{{history.block}}</td>
+
+	</div>
+	</table>
+<div>
+		<form action="{%url 'sar:history_design' history.id history.class_name %}" method="post">
+			{% csrf_token %}
+			<input type="submit" value="提交" id="Sub">
+		</form>
+	</div>
+	<div id="div1"></div>
+</body>
+
+</html>

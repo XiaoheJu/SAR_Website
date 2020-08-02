@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Off Canvas Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+
+    <link rel="stylesheet" href="{% static 'sar/bootstrap-3.3.7-dist/js/bootstrap.min.js' %}">
+
+    <script src="{% static 'sar/jquery.js' %}"></script>
+    <script src="{% static 'sar/bootstrap-3.3.7-dist/js/bootstrap.min.js' %}"></script>
+
+    
+
+    <!-- Custom styles for this template -->
+    <link type="text/css" href="{% static 'sar/new_index.css' %}" rel="stylesheet">
+
+    
+  </head>
+
+  <body>
+    <nav class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="new_index.html">sar</a>
+        </div>
+        
+        <div class="collapse navbar-collapse" id="example">
+        <ul class="nav navbar-nav">
+          <li><a href="{%url 'sar:login_view' %}"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;&nbsp;登陆</a></li>
+          <li><a href="signin.html">注册</a></li>
+          <li><a href="#">关于我们</a></li>
+          <li><a href="#">帮助</a></li>
+        </ul>
+      </div>
+      </div><!-- /.container -->
+    </nav><!-- /.navbar -->
+
+    <div class="container">
+
+      <div class="row row-offcanvas row-offcanvas-right">
+
+        <div class="col-xs-18 col-sm-12">
+          <p class="pull-right visible-xs">
+            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
+          </p>
+          <div class="jumbotron">
+            <h1>SAR实验设计平台</h1>
+            <p>这是一个可以帮您科学，便捷设计实验的平台。欢迎试用！</p>
+          </div>
+          <div class="row">
+            <div class="col-xs-6 col-lg-4">
+              <h2>随机区组试验设计</h2>
+              <p> 随机区组试验设计又称配伍组设计，它是按照一定的条件，将几个条件相同的受试对象划分为一个区组或配伍组，然后在每个区组内部按随即原则将每个受试对象分配到各组，对每组分别实施不同的处理，然后对其结果进行方差分析。</p>
+              <p><a class="btn btn-default" href="rcbd.html" role="button">开始 &raquo;</a></p>
+            </div><!--/.col-xs-6.col-lg-4-->
+            <div class="col-xs-6 col-lg-4">
+              <h2>正交试验设计</h2>
+              <p>正交试验设计是研究多因素多水平的一种设计方法，它是根据正交性从全面试验中挑选出部分有代表性的点进行试验，这些有代表性的点具备‘均匀分散，齐整可比’的特点。正交实验设计是分析因式设计的主要方法，是一种高效率，快速，经济的实验设计方法。 </p>
+              <p><a class="btn btn-default" href="orth.html" role="button">开始 &raquo;</a></p>
+            </div><!--/.col-xs-6.col-lg-4-->
+            <div class="col-xs-6 col-lg-4">
+              <h2>中心复合试验设计</h2>
+              <p>中心复合试验设计是一种最常用的响应曲面设计方法，它是采用多元二次回归方程来拟合因素与响应值之间的函数关系，通过对回归方程的分析来寻求最优因素与水平的组合，解决多因素问题的一种试验设计方法。 </p>
+              <p><a class="btn btn-default" href="{%url 'sar:ccd'%}" role="button">开始 &raquo;</a></p>
+            </div><!--/.col-xs-6.col-lg-4-->
+            
+          </div><!--/row-->
+        </div><!--/.col-xs-12.col-sm-9-->
+
+        
+      </div><!--/row-->
+
+      <hr>
+
+      
+    </div><!--/.container-->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="offcanvas.js"></script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+	<title>动态生成表单</title>
+	<script type="text/javascript">
+		function kk(){
+		    var element_div = document.getElementById("showText");
+		    element_div.innerHTML = "";
+
+			var a=parseInt(document.getElementsByName("group")[0].value);
+
+			for (var i = 0;i<a;i++) {
+				var div=document.createElement("div");
+				var node=document.createTextNode("第"+(i+1)+"组");
+				div.appendChild(node);
+				document.getElementById("showText" ).appendChild(div)
+
+				var input = document.createElement("input" );
+       			input.type = "text" ;
+        		input.name = i ;
+        		document.getElementById("showText" ).appendChild(input);
+			}
+			var input = document.createElement("input" );
+			input.type = "submit" ;
+
+			input.value = "提交";
+			document.getElementById("showText" ).appendChild(input);
+
+		}
+
+	</script>
+</head>
+<body >
+	<div>
+		<p>
+			完全随机试验
+		</p>
+		<form action="/sar/search-post" method="post">
+		{% csrf_token %}
+		<div>
+			组数<input type="text" name="group">
+			<input type="button"  value="确定" class="butt" onclick="kk()">
+		</div>
+		<div id= "showText" ></div>
+        </form>
+	</div>
+
+</body>
+</html>

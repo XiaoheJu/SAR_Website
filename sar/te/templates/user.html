@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	{% load static %}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>sar</title>
+	<link rel="stylesheet" href="{% static 'sar/bootstrap-3.3.7-dist/css/bootstrap.min.css' %}">
+    <script src="{% static 'sar/jquery.js' %}"></script>
+    <script src="{% static 'sar/bootstrap-3.3.7-dist/js/bootstrap.min.js' %}"></script>
+</head>
+<body>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button class="navbar-toggle" data-toggle="collapse" data-target="#example">
+					<span class="sr-only">切换导航</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand">SAR</a>
+				
+			</div>
+			<div class="collapse navbar-collapse" id="example">
+				<ul class="nav navbar-nav">
+					{%if user.is_authenticated %}
+					<li><a href="{%url 'sar:user_home'%}">{{ user.get_username }}</a></li>
+					{% else %}
+					<li><a href="{%url 'sar:login_view'%}"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;&nbsp;登陆</a></li>
+					<li><a href="#">注册</a></li>
+					{% endif %}
+					<li><a href="{%url 'sar:llogout'%}">退出</a></li>
+					<li><a href="#">关于我们</a></li>
+					<li><a href="#">帮助</a></li>
+				</ul>
+			</div>
+		</div>
+		
+	</nav>
+	<div class="container-fluid">
+			<h2><a href="{%url 'sar:history'%}" role="button" class="btn btn-primary btn-lg">历史记录&raquo;</a></h2>
+			<ul class="list-group">
+				{%for history in historys%}
+				<li class="list-group-item"><a href="{%url 'sar:detail' history.id%}">{{history.title}} {{history.build_time}} </li>
+				{%endfor%}
+			</ul>
+		</div>
+</body>
+</html>

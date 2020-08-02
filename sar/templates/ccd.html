@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% load static %}
+	<title>centerComposite</title>
+	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.0.js"></script>
+
+	<link rel="stylesheet" href="{% static 'sar/bootstrap-3.3.7-dist/css/bootstrap.min.css' %}">
+    <script src="sar/jquery.js"></script>
+
+    <script src="{% static 'sar/bootstrap-3.3.7-dist/js/bootstrap.min.js' %}"></script>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'sar/main_css.css' %}">
+</head>
+
+<script type="text/javascript">
+	
+
+	function addfactor(){
+		
+		newfactor=document.createElement("input");
+		newlevel=document.createElement("input");
+		newpage=document.createElement("input");
+		newli=document.createElement("li");
+		newForm=document.createElement("Form");
+		newdiv_factor=document.createElement("div");
+		newdiv_level=document.createElement("div");
+		newdiv_page=document.createElement("div");
+		newlabel_factor=document.createElement("label");
+		newlabel_level=document.createElement("label");
+		newlabel_page=document.createElement("label");
+		newtextfactor=document.createTextNode('因素');
+		newtextlevel=document.createTextNode('代码');
+		newtextpage=document.createTextNode('步长');
+		newlabel_factor.appendChild(newtextfactor);
+		newlabel_level.appendChild(newtextlevel);
+		newlabel_page.appendChild(newtextpage);
+		
+		newdiv_factor.appendChild(newlabel_factor);
+		newdiv_factor.appendChild(newfactor);
+		
+		newdiv_level.appendChild(newlabel_level);
+		newdiv_level.appendChild(newlevel);
+		
+		newdiv_page.appendChild(newlabel_page);
+		newdiv_page.appendChild(newpage);
+
+		newForm.appendChild(newdiv_factor);
+		newForm.appendChild(newdiv_level);
+		newForm.appendChild(newdiv_page);
+		newForm.setAttribute('class','form-inline');
+		newdiv_page.setAttribute('class','form-group');
+		newdiv_level.setAttribute('class','form-group');
+		newdiv_factor.setAttribute('class','form-group');
+		newfactor.setAttribute('class','form-control');
+		newlevel.setAttribute('class','form-control');
+		newpage.setAttribute('class','form-control');
+		newfactor.setAttribute('type','text');
+		newlevel.setAttribute('type','text');
+		newpage.setAttribute('type','text');
+		newlabel_page.setAttribute('class',"tt");
+		newlabel_level.setAttribute('class','tt');
+		newlabel_factor.setAttribute('class','tt');
+		newfactor.setAttribute('id','factor3');
+		newlevel.setAttribute('id','level3');
+		newpage.setAttribute('id','page3');
+
+		newli.appendChild(newForm);
+		var ele=document.getElementById('test');
+		ele.appendChild(newli);
+	}
+
+	function create(){
+		var c = document.getElementById('cc');
+		while(c.rows.length!=1){
+			c.deleteRow(-1);
+		}
+		var sum=parseInt($("#sum").val());
+	
+		for(var i=1; i<sum+1;i++ ){
+
+			newfactor=document.createElement("td");
+			newcode=document.createElement("td");
+			newpage=document.createElement("td");
+			newnuma=document.createElement("td");
+			newnumb=document.createElement("td");
+			newnumc=document.createElement("td");
+			newnumd=document.createElement("td");
+			newnume=document.createElement("td");
+
+			newfa=document.createElement("input");
+			newco=document.createElement("input");
+			newpa=document.createElement("input");
+			newa=document.createElement("input");
+			newb=document.createElement("input");
+			newc=document.createElement("input");
+			newd=document.createElement("input");
+			newe=document.createElement("input");
+
+			newfactor.appendChild(newfa);
+			newcode.appendChild(newco);
+			newpage.appendChild(newpa);
+			newnuma.appendChild(newa);
+			newnumb.appendChild(newb);
+			newnumc.appendChild(newc);
+			newnumd.appendChild(newd);
+			newnume.appendChild(newe);
+
+
+			newtr=document.createElement("tr");
+
+			newfa.setAttribute('id','factor'+i);
+			newco.setAttribute('id','code'+i);
+			newpa.setAttribute('id','page'+i);
+			newa.setAttribute('id','numa'+i);
+			newb.setAttribute('id','numb'+i);
+			newc.setAttribute('id','numc'+i);
+			newd.setAttribute('id','numd'+i);
+			newe.setAttribute('id','nume'+i);
+
+			newfa.setAttribute('type','text');
+			newco.setAttribute('type','text');
+			newpa.setAttribute('type','text');
+			newa.setAttribute('type','text');
+			newb.setAttribute('type','text');
+			newc.setAttribute('type','text');
+			newd.setAttribute('type','text');
+			newe.setAttribute('type','text');
+
+			
+			newtr.appendChild(newcode);
+			newtr.appendChild(newfactor);
+			newtr.appendChild(newpage);
+			newtr.appendChild(newnuma);
+			newtr.appendChild(newnumb);
+			newtr.appendChild(newnumc);
+			newtr.appendChild(newnumd);
+			newtr.appendChild(newnume);
+
+
+
+			var elem=document.getElementById('cc');
+			elem.appendChild(newtr);
+
+
+
+
+
+			
+			
+			
+
+		}
+	}
+
+	function tablea(a, id){
+		var m=0;
+
+		for (var n in a['y']){
+			m++;
+
+		}
+
+		for (var i =0; i<m; i++){
+
+			var newtr=document.createElement("tr");
+
+			var elem=document.getElementById(id);
+			elem.appendChild(newtr);
+			newtr.setAttribute('id','newtr'+i);
+			head(i+1,'newtr'+i);
+
+
+			for (var j in a){
+				var txt=document.createTextNode(a[j][i]);
+				var newtd=document.createElement("td");
+				newtd.setAttribute('id','newtd'+i+j);
+				if (j == 'y'){
+				    var inp = document.createElement("input")
+					inp.setAttribute('id','newinput'+i)
+				    newtd.appendChild(inp)
+				}
+				else {
+				    newtd.appendChild(txt);
+				}
+
+				var ele=document.getElementById('newtr'+i);
+				ele.appendChild(newtd);
+
+
+				// var newtd=$("<td></td>").text(a[j][i]);
+				// $("#newtr"+i).after(newtd);
+				
+			
+			}
+		}
+
+	}
+
+	function head(a,id){
+		// var newtr=document.createElement("tr");
+		// var elem=document.getElementById('gili');
+		// elem.appendChild(newtr);
+		// newtr.setAttribute('id','order');
+
+				var txt=document.createTextNode(a);
+				var newtd=document.createElement("td");
+				newtd.appendChild(txt);
+				var ele=document.getElementById(id);
+					ele.appendChild(newtd);
+
+		// var newtd=$("<td></td>").text(a);
+
+		
+		// $("#order").after(newtd);
+		
+	}
+
+	function bili(){
+		var c = document.getElementById('gili');
+		while(c.rows.length!=0){
+			c.deleteRow(-1);
+		}
+		var sum=parseInt($("#sum").val());
+		var newtr=document.createElement("tr");
+		var elem=document.getElementById('gili');
+		elem.appendChild(newtr);
+		newtr.setAttribute('id','order');
+
+		ccd = new Array();
+		b=createtable();
+		// for(var i = 0; i<b.length; i++){
+		//     ccd[i] = JSON.stringify(b[i])
+		// }
+		$.ajaxSetup({
+            data:{csrfmiddlewaretoken:'{{ csrf_token }}'}
+        });
+		$.ajax(
+               {
+                    type: 'POST',
+                        url:"{%url 'sar:ccd_design' %}",
+                        dataType: 'json',
+                        data:{'ccd': JSON.stringify(b)},
+                        success:function(data){
+                        data = data["ccd_design_result"];
+
+                        head('序号','order')
+
+						for (var i in data){
+							head(i,'order');
+
+						}
+
+						tablea(data, 'gili');
+
+                        }
+                    })
+		
+		
+
+
+		
+
+		
+
+
+
+
+
+		
+
+	}
+
+
+
+
+	
+    	
+
+		
+	
+</script>
+
+<script type="text/javascript">
+	function createtable(){
+
+		var sum=parseInt($("#sum").val());
+
+		console.log(sum);
+
+		var dic = [];
+
+		for (var i=1 ; i<sum+1;i++){
+
+			var data=new Array();
+
+			var a='factor'+i;
+
+			factor=$("#factor"+i).val();
+		
+			code=$("#code"+i).val();
+			page=$("#page"+i).val();
+			numc=$("#numc"+i).val();
+			numa=numc*(1-1.68*page/100).toFixed(2);
+			$("#numa"+i).val(numa);
+			numb=numc*(1-page/100).toFixed(2);
+			$("#numb"+i).val(numb);
+			numd=parseInt(numc*(1+page/100)).toFixed(2);
+			$("#numd"+i).val(numd);
+			nume=numc*(1+1.68*page/100).toFixed(2);
+			$("#nume"+i).val(nume);
+
+			$("#ch").removeAttr("disabled");
+
+			// data['factor']=factor;
+			// data['code']=code;
+			// data['page']=page;
+			// data['numa']=numa;
+			// data['numb']=numb;
+			// data['numc']=numc;
+			// data['numd']=numd;
+			// data['nume']=nume;
+			data = {'factor':factor, 'code':code, 'page':page,
+				'numa': numa, 'numb':numb, 'numc':numc, 'numd':numd,
+				'nume': nume
+			};
+
+			dic.push(data);
+			console.log(dic);
+
+			
+			}
+		return dic;
+			
+			
+
+
+		
+		// var factor1=$("#factor1").val();
+		// var level1=$("#level1").val();
+		// var page1=$("#page1").val();
+
+
+		// var factor2=$("#factor2").val();
+		// var level2=$("#level2").val();
+		// var page2=$("#page2").val();
+
+		// var factor3=$("#factor3").val();
+		// var level3=$("#level3").val();
+		// var page3=$("#page3").val();
+
+		// var data1=new Array();
+		// data1['factor1']=factor1;
+		// data1['level1']=level1;
+		// data1['page1']=page1;
+
+
+
+		// var data2=new Array();
+		// data2['factor2']=factor2;
+		// data2['level2']=level2;
+		// data2['page2']=page2;
+
+		// var data3=new Array();
+		// data3['factor3']=factor3;
+		// data3['level3']=level3;
+		// data3['page3']=page3;
+
+		// var data=[];
+		// data[0]=data1;
+		// data[1]=data2;
+		// data[2]=data3;
+
+		// var dic=new Array();
+		// dic['centerComposite']=data;
+
+		// console.log(dic);
+
+
+		
+	}
+
+	function get_analyze(){
+	    data = [];
+	    for(var i = 0; i < document.getElementById('gili').rows.length-1; i++){
+	    	// var da=new Array()
+	     //    da["#newinput"+i] = $("#newinput"+i).val()
+	        data.push($("#newinput"+i).val());
+		}
+		console.log(data)
+		$.ajaxSetup({
+            data:{csrfmiddlewaretoken:'{{ csrf_token }}'}
+        });
+		$.ajax(
+               {
+                    type: 'POST',
+                        url:"{%url 'sar:ccd_analyze' %}",
+                        dataType: 'json',
+                        data:{'ccd': JSON.stringify(data)},
+                        success:function(data){
+                        data = data["ccd_analyze"]['analyze'];
+                        var newtr=document.createElement("tr");
+						var elem=document.getElementById('analyze');
+						elem.appendChild(newtr);
+						newtr.setAttribute('id','analyze_order');
+
+						head("",'analyze_order');
+
+						for (var i in data){
+							head(i,'analyze_order');
+						}
+
+						tableas(data, 'analyze');
+
+                        }
+                    })
+    }
+    function tableas(a, id){
+		var m=0;
+		name_an=[]
+						
+						
+
+		for (var n in a['Estimate']){
+			m++;
+			name_an.push(n);
+
+		}
+		console.log(name_an)
+
+		for (var i =0; i<m; i++){
+
+			var newtr=document.createElement("tr");
+
+			var elem=document.getElementById(id);
+			elem.appendChild(newtr);
+			newtr.setAttribute('id','newtr_an'+i);
+			head(name_an[i],'newtr_an'+i);
+
+			for (var j in a){
+				console.log(name_an[i]);
+				var c=name_an[i];
+				var txt=document.createTextNode(a[j][c]);
+				console.log(typeof a[j][name_an[i]]);
+				console.log(a[j][name_an[i]]);
+				var newtd=document.createElement("td");
+				newtd.setAttribute('id','newtd_an'+i+j);
+				
+				newtd.appendChild(txt);
+				
+
+				var ele=document.getElementById('newtr_an'+i);
+				ele.appendChild(newtd);
+
+
+				// var newtd=$("<td></td>").text(a[j][i]);
+				// $("#newtr"+i).after(newtd);
+
+
+			}
+		}
+
+	}
+</script>
+
+
+<body>
+	
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="new_index.html">sar</a>
+        </div>
+        
+        <div class="collapse navbar-collapse" id="example">
+				<ul class="nav navbar-nav">
+					<li><a href="login.html"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;&nbsp;登陆</a></li>
+					<li><a href="signin.html">注册</a></li>
+					<li><a href="#">关于我们</a></li>
+					<li><a href="#">帮助</a></li>
+					<li><a href="course.html">相关课程</a></li>
+				</ul>
+			</div>
+      </div><!-- /.container -->
+    </nav><!-- /.navbar -->
+    <div class="container-fluid">
+        <div class="row">
+            
+            <div class="col-sm-3 col-md-2 sidebar" >
+                <ul class="nav nav-sidebar">
+                    <li style="font-weight: bold;"><a href="#">试验类别</a></li>
+                    <li ><a href="rcbd.html">随机区组试验设计</a></li>
+                    <li><a href="orth.html">正交试验设计</a></li>
+                    <li class="active"><a href="ccd.html">中心复合试验设计</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-9" >
+                <h1 class="page-header">中心复合试验设计</h1>
+                <form class="form-inline">
+				  <div class="form-group">
+				    <label for="sum">因素数</label>
+				    <input type="text" class="form-control" id="sum" placeholder="请输入因素数">
+				  </div>
+
+				  <button type="button" class="btn btn-default"  onclick="create()">确定</button>
+				  
+				</form>
+
+				<hr>
+				<h2 class="col-md-5  col-md-offset-4 ">试验因素水平表</h2>
+				<table class="table table-hover" id="cc">
+                	<tr >
+                	<td>
+
+				    	代码
+				    
+				  	</td>
+				  	<td >
+				    	因素
+				    </td>
+
+				    <td >
+
+				    	步长(%)
+				    
+				  	</td>
+				    
+				  	<td >
+				    	-1.68
+				    
+				  	</td>
+				  	<td >
+				    	-1
+				    </td>
+				    
+				  	<td >
+				    	0
+				    
+				  	</td>
+				  	<td >
+				    	1
+				    
+				  	</td>
+				  	<td >
+				    	1.68
+				   	</td>
+				    
+				 </tr>
+                </table>
+                <hr>
+				
+
+				<button type="button" class="btn btn-default" onclick="createtable()">生成表格</button>
+				
+
+
+
+			</div>
+		</div>
+		<div class="container">
+			<hr>
+			<div class="row">
+				
+				
+
+				<h2 class="col-md-5  col-md-offset-4 ">中心复合试验设计及响应值    <button  class="btn btn-default" disabled="disabled" onclick="bili()" id="ch">设计试验</button></h2>
+
+				<table class="table table-hover" id="gili">
+					
+					
+				</table>
+
+			</div>
+				
+
+				
+			
+		</div>
+		<div class="container">
+			<hr>
+			<div class="row">
+				
+				
+
+				<h2 class="col-md-5  col-md-offset-4 " onclick="get_analyze()">方程回归系数    <button  class="btn btn-default" >生成</button></h2>
+
+				<table class="table table-hover" id="analyze">
+					
+					
+				</table>
+
+			</div>
+				
+
+				
+			
+		</div>
+		<div class="container">
+			<hr>
+			<div class="row">
+				
+				
+
+				<h2 class="col-md-5  col-md-offset-4 " onclick="">回归方程的变量分析    <button  class="btn btn-default" >生成</button></h2>
+
+				<table class="table table-hover" id="">
+					
+					
+				</table>
+
+			</div>
+				
+
+				
+			
+		</div>
+
+
+
+				                
+
+</body>
+</html>

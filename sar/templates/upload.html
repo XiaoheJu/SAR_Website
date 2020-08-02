@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload</title>
+    {% load static %}
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.0.js"></script>
+    <script>
+    function FileUpload() {
+        var form_data = new FormData();
+        var file_info = $('#file_upload')[0].files[0];
+        form_data.append('file', file_info);
+        //if(file_info==undefined)暂且不许要判断是否有附件
+        //alert('你没有选择任何文件');
+        //return false
+        $.ajaxSetup({
+            data:{csrfmiddlewaretoken:'{{ csrf_token }}'}
+        });
+        $.ajax({
+            url: '{%url "sar:upload_ajax" %}',
+            type: 'POST',
+            data: form_data,
+            processData: false,  // tell jquery not to process the data
+            contentType: false, // tell jquery not to set contentType
+            success: function (data) {
+                var name = data['name'];
+                var d1=document.getElementById("test");
+                var img=document.createElement("img");
+                var src = "/static/sar/" + name;
+                img.src = src;
+ //               img.src= "{% static 'sar/23.jpg' %}";
+                d1.appendChild(img);
+            }
+        });
+
+
+    }
+
+    </script>
+</head>
+<body>
+
+<div>
+        <input type="file" name="file" id="file_upload">
+        <input type="button" value="上传" onclick="FileUpload()">
+</div>
+<div id="test"></div>
+</body>
+</html>

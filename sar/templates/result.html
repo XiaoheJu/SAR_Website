@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body onload="createTable()">
+<style type="text/css">
+  table{
+   border:#00ffff solid 2px;
+   border-collapse:collapse;
+  }
+  td{
+   border:#8080ff solid 2px;
+    padding:10px;
+  }
+</style>
+
+<script type="text/javascript">
+ var tableNode;
+ var treatments_result = {{treatments_result|safe}};
+ var treatment_levels = {{treatment_levels|safe}};
+ var form = {{form|safe}};
+ function createTable()
+{
+    tableNode=document.createElement("table");//获得对象
+    tableNode.setAttribute("id","table")
+    var row=form[0]
+    var col = form[1]
+    var trNode=tableNode.insertRow();
+    for(var y=0;y<col;y++){
+      var tdNode=trNode.insertCell();
+      tdNode.innerHTML= treatment_levels[y]
+      }
+     document.getElementById("div1").appendChild(tableNode);
+    for(var x=0;x<row;x++){
+       var trNode=tableNode.insertRow();
+       for(var y=0;y<col;y++){
+          var tdNode=trNode.insertCell();
+          tdNode.innerHTML= treatments_result[y][x]
+          }
+        }
+      document.getElementById("div1").appendChild(tableNode);
+}
+
+</script>
+<center><div id="div1"></div></center>
+</body>
+</html>

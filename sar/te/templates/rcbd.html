@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <title>随机区组试验</title>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.0.js"></script>
+
+    <link rel="stylesheet" href="{% static 'sar/bootstrap-3.3.7-dist/css/bootstrap.min.css' %}">
+    <script src="{% static 'sar/jquery.js' %}"></script>
+    <script src="{% static 'sar/bootstrap-3.3.7-dist/js/bootstrap.min.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'sar/main_css.css' %}">
+</head>
+<script>
+$(document).ready(function () {
+    $('#detail').click(function () {
+      $('#detail').attr("type", "hidden");
+      $('#form').show();
+      $('#Sub').show();
+      $("#div1").hide();
+      $('#build_csv').attr("type", "hidden");
+      $('#build_pdf').attr("type", "hidden");
+
+    });
+    $('#Sub').click(function () {
+        var drug_num = $('#drug_num').val();
+        var block_num = $('#block_num').val();
+        var block_name = $('#block_name').val();
+        var drug_name = $('#drug_name').val();
+        var title = $('#title').val();
+        $.ajaxSetup({
+            data:{csrfmiddlewaretoken:'{{ csrf_token }}'}
+        });
+        $("#div1").html("");
+        $.ajax(
+               {
+                    type: 'POST',
+                        url:"{%url "sar:rcbd_json" %}",
+                        dataType: 'json',
+                        data: {'class':'rcbd','drug_num':drug_num,'block_num':block_num,'block_name':block_name,
+                        'drug_name':drug_name, 'title':title},
+                        success:function(data){
+                            var Myerror = data['Myerror'];
+                            if (Myerror == 0) {
+                                var infor=new Array;
+                                infor=data["rbd_design_result"];
+                                var tableNode; 
+                                tableNode=document.createElement("table");//获得对象 
+                                tableNode.setAttribute("class","table table-bordered");
+                                var trNode=tableNode.insertRow();
+                                var tdNode=trNode.insertCell();
+                                document.getElementById("div1").appendChild(tableNode);
+                                tdNode.innerHTML='title';
+                                for(var x=0;x<=(block_num);x++){
+                                     var trNode=tableNode.insertRow(); 
+                                    for(var y=0;y<=drug_num;y++){
+                                    var tdNode=trNode.insertCell(); 
+                                    tdNode.innerHTML=infor[x*(parseInt(drug_num)+1)+y];
+                                            } 
+                                           } 
+                                    document.getElementById("div1").appendChild(tableNode);//添加到那个位置
+
+                                }
+                            $("#div1").show();
+                                $('#Sub').hide();
+                                 $('#build_csv').attr("type", "button");
+                            $('#build_pdf').attr("type", "button");
+                            $('#form').hide();
+                            $('#detail').attr("type", "button");
+                            }
+                          
+                        
+
+              
+    });
+});
+    $('#build_pdf').click(function () {
+       var drug_num = $('#drug_num').val();
+        var block_num = $('#block_num').val();
+        var block_name = $('#block_name').val();
+        var drug_name = $('#drug_name').val();
+        var title = $('#title').val();
+        $.ajaxSetup({
+            data:{csrfmiddlewaretoken:'{{ csrf_token }}'}
+        });
+        $.ajax({
+            type: 'POST',
+            url:"{%url "sar:pdf_build" %}",
+            dataType: 'json',
+            data: {'class':'rcbd','drug_num':drug_num,'block_num':block_num,'block_name':block_name,
+                        'drug_name':drug_name, 'title':title},
+            success:function(data){
+                $('#file_result').attr("value", data['result']);
+                $('#download').attr("type", "submit");
+                $('#build_csv').attr("type", "hidden");
+                $('#build_pdf').attr("type", "hidden");
+               }
+        })
+    });
+    $('#build_csv').click(function () {
+        var drug_num = $('#drug_num').val();
+        var block_num = $('#block_num').val();
+        var block_name = $('#block_name').val();
+        var drug_name = $('#drug_name').val();
+        var title = $('#title').val();
+        $.ajaxSetup({
+            data:{csrfmiddlewaretoken:'{{ csrf_token }}'}
+        });
+        $.ajax({
+            type: 'POST',
+            url:"{%url "sar:csv_build" %}",
+            dataType: 'json',
+            data: {'class':'rcbd','drug_num':drug_num,'block_num':block_num,'block_name':block_name,
+                        'drug_name':drug_name, 'title':title},
+            success:function(data){
+                $('#file_result').attr("value", data['result']);
+                $('#download').attr("type", "submit");
+                $('#build_csv').attr("type", "hidden");
+                $('#build_pdf').attr("type", "hidden");
+               }
+        })
+    })
+})
+</script>
+
+<body>
+<nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-toggle="collapse" data-target="#example">
+                    <span class="sr-only">切换导航</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="{%url 'sar:index'%}" class="navbar-brand">SAR</a>
+                
+            </div>
+            <div class="collapse navbar-collapse" id="example">
+                <ul class="nav navbar-nav">
+                    {%if user.is_authenticated %}
+					<li><a href="{%url 'sar:user_home'%}">{{ user.get_username }}</a></li>
+					{% else %}
+					<li><a href="{%url 'sar:login_view'%}"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;&nbsp;登陆</a></li>
+					<li><a href="#">注册</a></li>
+					{% endif %}
+                    <li><a href="#">关于我们</a></li>
+                    <li><a href="#">帮助</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            
+            <div class="col-sm-3 col-md-2 sidebar" >
+                <ul class="nav nav-sidebar">
+                    <li class="active"><a href="#">试验类别</a></li>
+                    <li><a href="#">完全随机试验设计</a></li>
+                    <li><a href="#">正交试验设计</a></li>
+                    <li><a href="#">随机区组试验设计</a></li>
+                </ul>
+            </div>
+        
+            <div class="col-sm-9" >
+                <h1 class="page-header">随机区组试验设计</h1>
+                <div><input type="hidden" value='试验详情' class="btn btn-default" id='detail' ><div>
+                <form class="form" id="form">
+					<div class="form-group">
+					    <label  for="title">试验名称</label>
+					    <input type="text" class="form-control" id="title" placeholder="试验名称" name="row1">
+					  </div>
+					  <div class="form-group">
+					    <label  for="drug_name">处理对象名称</label>
+					    <input type="text" class="form-control" id="drug_name" placeholder="处理对象名称" name="row1">
+					  </div>
+					  <div class="form-group">
+					    <label  for="drug_num">处理对象总数</label>
+					    <input type="text" class="form-control" id="drug_num" placeholder="处理对象总数" name="row1">
+					  </div>
+					  <div class="form-group">
+					    <label  for="block_name">区组名称</label>
+					    <input type="text" class="form-control" id="block_name" placeholder="对象总数" name="row1">
+					  </div>
+
+					  <div class="form-group">
+					    <label  for="block_num">区组总数</label>
+					    <input type="text" class="form-control" id="block_num" placeholder="区组总数" name="cols1">
+					  </div>
+					  <button type="button" class="btn btn-default" id="Sub" >提交</button>
+				</form>
+                <div id="div1"></div>
+                <input type="hidden" value="生成PDF" class="btn btn-default" id = 'build_pdf'>
+                <input type="hidden" value="生成CSV" class="btn btn-default" id = 'build_csv'>
+                <div>
+                    <form method="post" action="{%url "sar:download_result" %}">
+                    {% csrf_token %}
+                    <input type="hidden" id="file_result" class="btn btn-default" name="file_result">
+                    <input type="hidden" value='下载' class="btn btn-success" id='download' >
+                    </form>
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,815 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cc73c8d8-05e4-4c51-a8ae-331be5f40d82" name="Default" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/sardesign$output.coverage" NAME="output Coverage Results" MODIFIED="1555491158939" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sar" />
+    <SUITE FILE_PATH="coverage/sardesign$rserve.coverage" NAME="rserve Coverage Results" MODIFIED="1555491501453" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sar" />
+    <SUITE FILE_PATH="coverage/sardesign$controller.coverage" NAME="controller Coverage Results" MODIFIED="1555582435528" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sar" />
+    <SUITE FILE_PATH="coverage/sardesign$data_view.coverage" NAME="data_view Coverage Results" MODIFIED="1555557265369" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sar" />
+    <SUITE FILE_PATH="coverage/sardesign$sar.coverage" NAME="sar Coverage Results" MODIFIED="1555240242706" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sar" />
+    <SUITE FILE_PATH="coverage/sardesign$design.coverage" NAME="design Coverage Results" MODIFIED="1555389330747" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sar" />
+    <SUITE FILE_PATH="coverage/sardesign$CentralControllerTest.coverage" NAME="CentralControllerTest Coverage Results" MODIFIED="1555559285903" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/sardesign$AnalyzeTest.coverage" NAME="AnalyzeTest Coverage Results" MODIFIED="1555584370576" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/sardesign$parser.coverage" NAME="parser Coverage Results" MODIFIED="1555564533501" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sar" />
+    <SUITE FILE_PATH="coverage/sardesign$input.coverage" NAME="input Coverage Results" MODIFIED="1555227489658" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sar" />
+    <SUITE FILE_PATH="coverage/sardesign$DataViewTest.coverage" NAME="DataViewTest Coverage Results" MODIFIED="1555566012033" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="rserve.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sar/rserve.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="45" column="43" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="43" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="environments.py" pinned="false" current-in-tab="false">
+        <entry file="file://D:/Program Files/Python/Lib/site-packages/rpy2/robjects/environments.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="116">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="parser.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sar/parser.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="12" column="34" lean-forward="true" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="output.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sar/output.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="326">
+              <caret line="99" column="34" selection-start-line="99" selection-start-column="28" selection-end-line="99" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="analyze.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sar/analyze.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="460">
+              <caret line="73" selection-start-line="73" selection-end-line="73" />
+              <folding>
+                <element signature="e#0#16#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AnalyzeTest.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tests/AnalyzeTest.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="182">
+              <caret line="7" column="75" lean-forward="true" selection-start-line="7" selection-start-column="75" selection-end-line="7" selection-end-column="75" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="input.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sar/input.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="492">
+              <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CentralControllerTest.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/CentralControllerTest.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="934">
+              <caret line="56" selection-start-line="56" selection-end-line="56" />
+              <folding>
+                <element signature="e#0#44#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="controller.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sar/controller.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="137">
+              <caret line="68" selection-start-line="68" selection-end-line="68" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="codecs.py" pinned="false" current-in-tab="false">
+        <entry file="file://D:/Program Files/Python/Lib/codecs.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="142">
+              <caret line="308" selection-start-line="308" selection-end-line="308" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>class</find>
+      <find>deal</find>
+      <find>BaseView</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>Analyze</replace>
+    </replaceStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/sar/contr.py" />
+        <option value="$PROJECT_DIR$/sar/visualization.py" />
+        <option value="$PROJECT_DIR$/sar/data.py" />
+        <option value="$PROJECT_DIR$/sar/control.py" />
+        <option value="$PROJECT_DIR$/tests/controller/CentralControllerTest.py" />
+        <option value="$PROJECT_DIR$/sar/__init__.py" />
+        <option value="$PROJECT_DIR$/sar/design_parser.py" />
+        <option value="$PROJECT_DIR$/sar/analysis.py" />
+        <option value="$PROJECT_DIR$/sar/data_access.py" />
+        <option value="$PROJECT_DIR$/sar/controller.py" />
+        <option value="$PROJECT_DIR$/sar/design.py" />
+        <option value="$PROJECT_DIR$/tests/Analyzetest.py" />
+        <option value="$PROJECT_DIR$/tests/CentralControllerTest.py" />
+        <option value="$PROJECT_DIR$/tests/DesignTest.py" />
+        <option value="$PROJECT_DIR$/sar/data_view.py" />
+        <option value="$PROJECT_DIR$/sar/util.py" />
+        <option value="$PROJECT_DIR$/tests/DataViewTest.py" />
+        <option value="$PROJECT_DIR$/sar/output.py" />
+        <option value="$PROJECT_DIR$/sar/input.py" />
+        <option value="$PROJECT_DIR$/sar/sar.py" />
+        <option value="$PROJECT_DIR$/sar/parser.py" />
+        <option value="$PROJECT_DIR$/sar/analyze.py" />
+        <option value="$PROJECT_DIR$/sar/rserve.py" />
+        <option value="$PROJECT_DIR$/tests/AnalyzeTest.py" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-55" />
+    <option name="y" value="273" />
+    <option name="width" value="1932" />
+    <option name="height" value="1047" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="sardesign" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sardesign" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sardesign" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sardesign" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sardesign" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sardesign" type="462c0819:PsiDirectoryNode" />
+              <item name="sar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sardesign" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sardesign" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.AnalyzeTest">
+    <configuration name="AnalyzeTest" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="sardesign" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/AnalyzeTest.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="CentralControllerTest" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="sardesign" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/CentralControllerTest.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="DataViewTest" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="sardesign" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/DataViewTest.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="controller" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="sardesign" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/sar" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sar/controller.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="parser" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="sardesign" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/sar" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sar/parser.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.CentralControllerTest" />
+      <item itemvalue="Python.DataViewTest" />
+      <item itemvalue="Python.parser" />
+      <item itemvalue="Python.AnalyzeTest" />
+      <item itemvalue="Python.controller" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.AnalyzeTest" />
+        <item itemvalue="Python.controller" />
+        <item itemvalue="Python.DataViewTest" />
+        <item itemvalue="Python.parser" />
+        <item itemvalue="Python.CentralControllerTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cc73c8d8-05e4-4c51-a8ae-331be5f40d82" name="Default" comment="" />
+      <created>1555220967692</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1555220967692</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <layout>
+      <window_info anchor="bottom" id="TODO" order="7" weight="0.32977462" />
+      <window_info anchor="bottom" id="Mypy Terminal" order="0" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.0836887" side_tool="true" visible="true" weight="0.23713647" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Python Console" order="14" sideWeight="0.9205757" weight="0.6442953" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.9163113" weight="0.23713647" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.5525727" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.11513859" />
+      <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" weight="0.43297747" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="SciView" order="3" visible="true" weight="0.0" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.8454158" weight="0.49328858" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info active="true" anchor="bottom" id="REST Client" order="15" visible="true" weight="0.50817883" />
+      <window_info anchor="bottom" id="Find" order="2" />
+      <window_info active="true" anchor="bottom" id="Concurrent Activities Diagram" order="13" sideWeight="0.49947917" visible="true" weight="0.3293348" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tests/DataViewTest.py</url>
+          <line>33</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/sar/rserve.py</url>
+          <line>69</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+      <option name="time" value="46" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/sar/sar.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1586">
+          <caret line="62" column="36" selection-start-line="62" selection-start-column="36" selection-end-line="62" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/CentralControllerTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sar/input.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="962">
+          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Program Files/Python37/Lib/asyncio/tasks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14352">
+          <caret line="564" column="60" selection-start-line="564" selection-start-column="32" selection-end-line="564" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sar/parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sar/design.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="754">
+          <caret line="29" column="33" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sar/parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sar/controller.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1508">
+          <caret line="58" column="51" lean-forward="true" selection-start-line="58" selection-start-column="51" selection-end-line="58" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sar/sar.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1586">
+          <caret line="62" column="36" lean-forward="true" selection-start-line="62" selection-start-column="36" selection-end-line="62" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/CentralControllerTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="5" column="20" lean-forward="true" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sar/input.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="962">
+          <caret line="37" column="13" lean-forward="true" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Program Files/Python37/Lib/asyncio/tasks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14352">
+          <caret line="564" column="60" selection-start-line="564" selection-start-column="32" selection-end-line="564" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sar/control.py" />
+    <entry file="file://$PROJECT_DIR$/tests/controller/CentralControllerTest.py" />
+    <entry file="file://D:/Program Files/Python37/Lib/queue.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-146">
+          <caret line="90" column="8" selection-start-line="90" selection-start-column="8" selection-end-line="90" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Program Files/Python37/Lib/asyncio/events.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="214" column="8" selection-start-line="214" selection-start-column="8" selection-end-line="214" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="1657" selection-start-line="1657" selection-end-line="1657" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Program Files/Python37/Lib/asyncio/base_events.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="1675" selection-start-line="1675" selection-end-line="1675" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Program Files/Python37/Lib/selectors.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="314" selection-start-line="314" selection-end-line="314" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Program Files/Python37/Lib/asyncio/queues.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-20">
+          <caret line="185" lean-forward="true" selection-start-line="185" selection-end-line="185" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Program Files/Python37/Lib/imaplib.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2106" />
+      </provider>
+    </entry>
+    <entry file="file://D:/Program Files/Python37/Lib/importlib/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1114">
+          <caret line="108" column="4" selection-start-line="108" selection-start-column="4" selection-end-line="108" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2018.1/system/python_stubs/-480177086/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="3628" column="8" selection-start-line="3628" selection-start-column="8" selection-end-line="3628" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Program Files/Python37/Lib/asyncio/tasks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="564" column="60" selection-start-line="564" selection-start-column="32" selection-end-line="564" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Program Files/Python/Lib/importlib/_bootstrap.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="976" column="23" lean-forward="true" selection-start-line="976" selection-start-column="23" selection-end-line="976" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Program Files/Python/Lib/importlib/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="107" column="4" selection-start-line="107" selection-start-column="4" selection-end-line="107" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Program Files/Python/Lib/site-packages/rpy2/robjects/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="360" selection-start-line="360" selection-end-line="360" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Program Files/Python/Lib/functools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="744" selection-start-line="744" selection-end-line="744" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Program Files/Python/Lib/json/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="309" selection-start-line="309" selection-end-line="309" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Program Files/Python/Lib/site-packages/pandas/core/frame.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="2505" selection-start-line="2505" selection-end-line="2505" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://Python/sar.design.Sardesign">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>Python</ID>
+          <OriginalElement>sar.design.Sardesign</OriginalElement>
+          <nodes>
+            <node x="" y="">sar.design.BaseSarDesign</node>
+            <node x="" y="">sar.design.Sardesign</node>
+            <node x="" y="">object</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="91.0" y="95.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Program Files/Python/Lib/site-packages/pandas/core/generic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="1406" selection-start-line="1406" selection-end-line="1406" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Program Files/Python/Lib/hashlib.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="51" lean-forward="true" selection-start-column="51" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sar/util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="18" column="42" lean-forward="true" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3/collections/__init__.pyi">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6500">
+          <caret line="279" column="6" selection-start-line="279" selection-start-column="6" selection-end-line="279" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sar/design.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1456">
+          <caret line="60" selection-start-line="60" selection-end-line="60" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/DesignTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sar/sar.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="28" column="60" selection-start-line="28" selection-start-column="60" selection-end-line="28" selection-end-column="60" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/DataViewTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="23" column="28" lean-forward="true" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#77#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sar/data_view.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="71" column="52" selection-start-line="71" selection-start-column="38" selection-end-line="71" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/CentralControllerTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="934">
+          <caret line="56" selection-start-line="56" selection-end-line="56" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sar/input.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="492">
+          <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sar/output.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="99" column="34" selection-start-line="99" selection-start-column="28" selection-end-line="99" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sar/parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="12" column="34" lean-forward="true" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sar/analyze.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="73" selection-start-line="73" selection-end-line="73" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Program Files/Python/Lib/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="308" selection-start-line="308" selection-end-line="308" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sar/controller.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sar/rserve.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="45" column="43" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Program Files/Python/Lib/site-packages/rpy2/robjects/environments.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/AnalyzeTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="7" column="75" lean-forward="true" selection-start-line="7" selection-start-column="75" selection-end-line="7" selection-end-column="75" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

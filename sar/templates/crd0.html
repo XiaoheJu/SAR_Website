@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head >
+    <meta charset="UTF-8">
+    <title>完全随机</title>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.0.js"></script>
+    <script type="text/javascript">
+		function kk(){
+		    var element_div = document.getElementById("showText");
+		    element_div.innerHTML = "";
+
+			var a=parseInt(document.getElementsByName("group")[0].value);
+
+			for (var i = 0;i<a;i++) {
+				var div=document.createElement("div");
+				var node=document.createTextNode("第"+(i+1)+"组");
+				div.appendChild(node);
+				document.getElementById("showText" ).appendChild(div);
+
+				var input = document.createElement("input" );
+       			input.type = "text" ;
+        		input.id = i + "_input";
+        		document.getElementById("showText" ).appendChild(input);
+
+			}
+                $("#butt").hide();
+        		$("#hidden").removeAttr("hidden");
+		}
+
+	</script>
+    <script>
+        $(document).ready(function(){
+            $("#Sub").click(function(){
+                var group = $("#group").val();
+                var dic = new Array();
+                dic.push(1);
+                dic.push(group);
+                for (var op=0;op<group;op++){
+                    dic.push($("#" + op + "_input").val());
+                }
+                $("#result").html("");
+                $.ajax(
+                    {
+
+                        type: 'GET',
+                        url:"{%url "sar:crd_json" %}",
+                        dataType: 'json',
+                        data: {'dict':dic.toString()} ,
+                        success:function(data){
+                            var Myerror = data['Myerror'];
+							if (Myerror == 0) {
+
+                                var tableNode;
+                                var treatments_result_ = data['treatments_result'];
+                                var treatment_levels = data['treatment_levels'];
+                                var form = data['form'];
+                                var treatments_result = new Array(form[1]);
+                                var k =0;
+								for (var i=0;i<form[1];i++){
+                                    treatments_result[i] = new Array(form[0]);
+                                    for(var j=0;j<form[0];j++){
+                                        treatments_result[i][j] = treatments_result_[k];
+										k++;
+									}
+								}
+
+                                tableNode = document.createElement("table");
+                                tableNode.setAttribute('border','1');
+                                tableNode.style.color="red";
+                                var row = form[0];
+                                var col = form[1];
+                                var trNode = tableNode.insertRow();
+                                for (var y = 0; y < col; y++) {
+                                    var tdNode = trNode.insertCell();
+                                    tdNode.innerHTML = treatment_levels[y];
+                                }
+
+                                document.getElementById("result").appendChild(tableNode);
+                                for (var x = 0; x < row; x++) {
+                                    var trNode = tableNode.insertRow();
+                                    for (var y = 0; y < col; y++) {
+                                        var tdNode = trNode.insertCell();
+                                        tdNode.innerHTML = treatments_result[y][x];
+                                    }
+                                }
+                                document.getElementById("result").appendChild(tableNode);
+                            }
+                            else
+                                document.getElementById('result').innerHTML = '您的输入有误';
+                        }
+                    }
+                );
+
+            });
+        });
+    </script>
+
+
+</head>
+<body>
+<div>
+		<p>
+			完全随机试验
+		</p>
+
+		<div>
+			组数<input type="text" id="group" name="group">
+			<input type="button"  value="确定" id="butt" onclick="kk()">
+
+		</div>
+		<div id= "showText" ></div>
+    <div id = "hidden" hidden><input type="button"  value="提交" id = 'Sub' ></div>
+    <div id="result" ></div>
+	</div>
+</body>
+</html>
